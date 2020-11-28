@@ -1,10 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="./lib/css/styles.css">
 </head>
+
 <body>
 
+<div class="grid-container">
+    <header class="header">
+        <div>
+            Patient Name:
+            <span class="banner-value" id="patient_name">..</span>
+            Gender:
+            <span class="banner-value" id="gender">..</span>
+            DOB:
+            <span class="banner-value" id="dob">..</span>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main-overview">
+            <div class="small-card">
+                <div>Height</div>
+                <div class="ob-value" id="height">undefined</div>
+            </div>
+            <div class="small-card">
+                <div>Weight</div>
+                <div class="ob-value" id="weight">undefined</div>
+            </div>
+            <div class="small-card">
+                <div>Systolic Blood Pressure</div>
+                <div class="ob-value" id="sys">undefined</div>
+            </div>
+            <div class="small-card">
+                <div>Diastolic Blood Pressure</div>
+                <div class="ob-value" id="dia">undefined</div>
+            </div>
+            <div class="small-card">
+                <div>LDL</div>
+                <div class="ob-value" id="ldl">undefined</div>
+            </div>
+            <div class="small-card">
+                <div>HDL</div>
+                <div class="ob-value" id="hdl">undefined</div>
+            </div>
+        </div>
+        <div class="small-card">
+            <div>Total score ORT</div>
+            <div class="ob-value" id="OpR">undefined</div>
+        </div>
+        <div class="small-card">
+            <div>Total score [DAST-10]</div>
+            <div class="ob-value" id="DAST">undefined</div>
+        </div>
+        <div class="small-card">
+            <div>Suggested screenings </div>
+            <div class="ob-value" id="SScreening">82666-9 Loinc code dast 10 panel </div>
+        </div>
+        <div class="small-card">
+            <div>Analyzed risk factor for addiction </div>
+            <div class="ob-value" id="arf">Patient is at moderate risk </div>
+        </div>
+        <div class="small-card">
+            <div>Patients Risk</div>
+            <div class="ob-value" id="PatientRisk">moderate</div>
+        </div>
+        <h1>Prescription is ok but we recommend NO REFILLS   </h1>
+        <!--        <form>-->
+        <!--            <input type="radio" id="male" name="gender" value="male">-->
+        <!--            <label for="male">Male</label><br>-->
+        <!--            <input type="radio" id="female" name="gender" value="female">-->
+        <!--            <label for="female">Female</label><br>-->
+
+        <!--            <label for="fname">Patient last name:</label><br>-->
+        <!--            <input type="text" id="fname" name="fname" value="Johnson"><br>-->
+        <!--            <label for="lname">Patient Zip code:</label><br>-->
+        <!--            <input type="text" id="lname" name="lname" value="00000"><br><br>-->
+
+        <!--            <input type="checkbox" id="Poo" name="Poo" value="Bike">-->
+        <!--            <label for="Poo"> Previous Opioid Order</label><br>-->
+        <!--            <input type="checkbox" id="addict2" name="addict2" value="Car">-->
+        <!--            <label for="addict2"> Stated addiction</label><br>-->
+        <!--            <input type="checkbox" id="addict3" name="addict3" value="Boat">-->
+        <!--            <label for="addict3"> suspected addiction </label>-->
+        <!--            <input type="button" onclick="addictionChecker()"value="Submit">-->
+        <!--            &lt;!&ndash;        <a href="risk_assessment.html">The Link</a>&ndash;&gt;-->
+        <!--        </form>-->
+        <div class="big-card">
+            <div class="card">
+                <div class="title">
+                    Patient moderate  Risk LOOK at CDC guidelines for opioid Prescribing and give addition warning sign pamphlets
+                </div>
+                <h1> prescription should be limited with dosage and refills    </h1>
+
+                <a href="https://www.cdc.gov/drugoverdose/prescribing/guideline.html">CDC GUIDELINES </a>
+
+                <h2> please look at below data to see if your area is an at risk community or state  </h2>
+            </div>
+
+            <div class="card">
+                <div class="title">
+                    Medication Requests
+                </div>
+                <ul id="med_list"></ul>
+            </div>
+        </div>
+
+    </main>
+</div>
+<div class='tableauPlaceholder' id='viz1606324567850' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mi&#47;MiniProject2_16002898523520&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MiniProject2_16002898523520&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mi&#47;MiniProject2_16002898523520&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1606324567850');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<script src='./lib/js/fhir-client.js'></script>
+<!--  <script src="./lib/js/get-data.js"></script>-->
+
+<!-- uncomment below script and comment above script to switch for easy local testing -->
+<script src="./lib/js/get-data-mod.js"></script>
 </body>
+
 </html>
